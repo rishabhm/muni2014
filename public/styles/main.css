@@ -98,7 +98,7 @@ body {
 }
 
 .inpagelinks li {
-	padding-top: 5px;
+	padding-top: 7px;
 	transition: color 0.5s;
 	cursor: pointer;
 }
@@ -127,13 +127,15 @@ body {
 	display: inline-block;
 	width: 800px;
 	height: 100%;
-	/*background-color: #123456;*/
+	background-color: rgba(255,255,255,0.6);
+	overflow: scroll;
 	border-right: 1px solid #000;
 	margin-left: 300px;
 }
 
 .right_col img {
 	position: fixed;
+	z-index: -1;
 	bottom: 0;
 }
 
@@ -154,6 +156,30 @@ body {
 }
 
 .home {
+	display: none;
+	padding-top: 15px;
+}
+
+.registration {
+	/*display: none;*/
+	padding-top: 15px;
+	padding-bottom: 100px;
+	/*overflow: scroll;*/
+	/*background-color: rgba(255,255,255,0.6);*/
+}
+
+.hotel {
+	display: none;
+	padding-top: 15px;
+}
+
+.committee {
+	display: none;
+	padding-top: 15px;	
+}
+
+.resources {
+	display: none;
 	padding-top: 15px;
 }
 
@@ -161,6 +187,24 @@ body {
 	font-family: 'Parisienne', cursive;
 	text-align: right;
 	padding-right: 25px;
+}
+
+.regheading {
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	text-align: right;
+	padding-right: 25px;	
+	margin-bottom: 30px;
+}
+
+
+.heading {
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	text-align: right;
+	padding-right: 25px;	
+	margin-bottom: 30px;
+	/*background-color: rgba(255,255,255,0.5)	*/
 }
 
 .home .heading {
@@ -173,14 +217,45 @@ body {
 	margin-top: -10px;	
 }
 
-.home img {
-	z-index: -1;
+.address {
+	padding: 5px 10px;
+}
+
+.registration .letter table {
+	background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	padding-top: 0;
+	border: 1px solid #123456;
+	margin-bottom: 15px;
+}
+
+.itrow {
+	font-style: italic;
+}
+
+.registration .letter table th {
+	border-bottom: 1px solid #123456;
+	vertical-align: middle;
+}
+
+.regreg {
+	border-top: 1px solid #123456;
+}
+
+.registration .table td, th {
+	padding: 5px;
+}
+
+.letter ol li {
+	padding-bottom: 10px;
 }
 
 .letter {
 	padding-left: 15px;
 	font-family: 'Quattrocento', serif;
 	margin-top: -25px;
+	width: 700px;
+	/*background-color: rgba(255,255,255,0.5);*/
 }
 
 .letter_beginning {

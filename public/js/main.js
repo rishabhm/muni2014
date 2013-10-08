@@ -6,4 +6,5 @@ $(document).ready(function(){
 	socket.on('callingBack', function (data) {
 		console.log(data);
 	});
+	$('.right_col').css('height', window.innerHeight);
 });
