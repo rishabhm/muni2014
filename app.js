@@ -31,36 +31,36 @@ passport.deserializeUser(function(id, done) {
     })
 })
 
-passport.use(new FacebookStrategy({
-    clientID: '332629783550339',
-    clientSecret: '7de88ea7d39e4d676a582295675a2cbe',
-    callbackURL: "http://localhost:3000/auth/facebook/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOne({'facebook.id' : profile.id}, function (err, user) {
-        if (user) {
-            done(null, user);
-        } else {
-            console.log(profile);
-            var user = new User({
-                username    : profile.id,
-                // email       : profile.emails[0].value,
-                name        : profile.displayName,
-                provider    : 'facebook',
-                facebook    : profile._json
-            });
-            user.save(function (err) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log(user);
-                    return done(err, user);
-                }
-            });
-        }
-    });
-  }
-));
+// passport.use(new FacebookStrategy({
+//     clientID: '332629783550339',
+//     clientSecret: '7de88ea7d39e4d676a582295675a2cbe',
+//     callbackURL: "http://localhost:3000/auth/facebook/callback"
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     User.findOne({'facebook.id' : profile.id}, function (err, user) {
+//         if (user) {
+//             done(null, user);
+//         } else {
+//             console.log(profile);
+//             var user = new User({
+//                 username    : profile.id,
+//                 // email       : profile.emails[0].value,
+//                 name        : profile.displayName,
+//                 provider    : 'facebook',
+//                 facebook    : profile._json
+//             });
+//             user.save(function (err) {
+//                 if (err) {
+//                     console.log(err);
+//                 } else {
+//                     console.log(user);
+//                     return done(err, user);
+//                 }
+//             });
+//         }
+//     });
+//   }
+// ));
 
 app.configure(function(){
     app.set('views', config.root + '/app/views');

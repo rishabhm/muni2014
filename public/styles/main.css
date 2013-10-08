@@ -1,40 +1,206 @@
 /*Styling rules for body*/
 
 body {
-	background-image: url('../resources/bg_pattern/notebook.png');
+	/*background-image: url('../resources/bg_pattern/notebook.png');*/
+	margin: 0;
 }
 
-.font1 {
-	font-family: 'Amatic SC', cursive;
+.left_col {
+	position: absolute;
+	height: 100%;
+	width: 300px;
+	background-color: #000;
+	display: inline-block;
 }
 
-/*Styling rules for the heading*/
-
-h1 {
-	font-size: 10em;
+.logo {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 15px;
+	/*margin-bottom: 25px;*/
 	text-align: center;
 }
 
-#heading {
-	padding-top: 100px;
+.logo img {
+	margin-bottom: 10px;
 }
 
-/*Styling rules for normal text*/
+.logo .mun {
+	font-family: 'Josefin Sans', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 30px;
+}
 
-#ask_user {
+.logo .ill {
+	font-family: 'Roboto Slab';
+	color: rgb(208, 118, 65);
+	font-size: 40px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.logo_text {
 	text-align: center;
-	font-size: 75px;
+	color: #fff;
+	font-size: 15pt;
+	font-family: 'Raleway Dots', cursive;
 }
 
-#ask_user select {
-	background: transparent;
-	background-color: rgba(255,255,255,0.5);
-	background: url('../resources/images/arrow.jpg') no-repeat right #ddd;
-  	padding: 5px 15px;
-  	padding-right: 30px;
-  	font-size: 75px;
-   	border: 0;
-  	border-radius: 0;
-  	color: #eee;
-   	-webkit-appearance: none;
+.hr {
+	margin-top: 15px;
+	width: 100%;
+	height: 1px;
+	background-color: #333;
+}
+
+.menu {
+	color: #fff;
+	/*font-weight: lighter;*/
+	padding-top: 5px;
+	padding-left: 30px;
+	font-size: 18pt;
+	letter-spacing: 1px;
+	/*text-align: center;*/
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.menu .hr {
+	margin-left: -30px;
+	margin-top: 5px;
+	padding-right: 30px;
+}
+
+.last_col_heading {
+	font-family: 'Josefin Sans', sans-serif;
+	color: #fff;
+	font-size: 25px;
+}
+
+.ann_heading {
+	padding-left: 15px;
+	padding-top: 20px;
+}
+
+.importantnotices {
+	height: 300px;
+}
+
+.onthispage {
+	padding-left: 15px;
+	padding-top: 20px;
+}
+
+.inpagelinks {
+	width: 300px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: rgba(255,255,255,0.5);
+	font-size: 15pt;
+}
+
+.inpagelinks li {
+	padding-top: 5px;
+	transition: color 0.5s;
+	cursor: pointer;
+}
+
+.inpagelinks li:hover {
+	color: rgba(255,255,255,1);
+}
+
+.inpagelinks ul {
+	margin-top: 5px;
+}
+
+.menu_item {
+	padding: 10px 0;
+	padding-top: 15px;
+	cursor: pointer;
+	transition: color 0.5s;
+}
+
+.menu_item:hover {
+	color: rgb(255,134,40);
+}
+
+.right_col {
+	position: absolute;
+	display: inline-block;
+	width: 800px;
+	height: 100%;
+	/*background-color: #123456;*/
+	border-right: 1px solid #000;
+	margin-left: 300px;
+}
+
+.right_col img {
+	position: fixed;
+	bottom: 0;
+}
+
+.last_col {
+	position: absolute;
+	display: inline-block;
+	width: 350px;
+	height: 100%;
+	background-color: #123456;
+	margin-left: 1100px;
+}
+
+
+.last_col .hr {
+	height: 2px;
+	background-color: #fff;
+	width: 100%;
+}
+
+.home {
+	padding-top: 15px;
+}
+
+.homeheading {
+	font-family: 'Parisienne', cursive;
+	text-align: right;
+	padding-right: 25px;
+}
+
+.home .heading {
+	font-size: 20px;
+	padding-right: 50px;
+}
+
+.home .secgen {
+	font-size: 30px;
+	margin-top: -10px;	
+}
+
+.home img {
+	z-index: -1;
+}
+
+.letter {
+	padding-left: 15px;
+	font-family: 'Quattrocento', serif;
+	margin-top: -25px;
+}
+
+.letter_beginning {
+	font-size: 18px;
+}
+
+.letter_para {
+	margin-top: 10px;
+	width: 650px;
+}
+
+.letter_ending {
+	padding-top: 15px;
+}
+
+.letter_ending .gaby {
+	font-family: 'Parisienne', cursive;
+	font-size: 25px;
+}
+
+.letter_ending .post {
+	font-weight: bold;
 }
