@@ -1,0 +1,14 @@
+{
+	"name": "test-app",
+	"description" : "trying to learn how to setup a basic node mvc",
+	"version" : "0.0.1",
+	"scripts" : {
+		"start" : "node app.js"
+	},
+	"devDependencies" : {
+		"express" 	: "3.x",
+		"redis"		: "*",
+		"mongoose"	: "*",
+		"jade" 		: "*"
+	}
+}
