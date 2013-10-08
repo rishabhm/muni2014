@@ -1,0 +1,40 @@
+/*Styling rules for body*/
+
+body {
+	background-image: url('../resources/bg_pattern/notebook.png');
+}
+
+.font1 {
+	font-family: 'Amatic SC', cursive;
+}
+
+/*Styling rules for the heading*/
+
+h1 {
+	font-size: 10em;
+	text-align: center;
+}
+
+#heading {
+	padding-top: 100px;
+}
+
+/*Styling rules for normal text*/
+
+#ask_user {
+	text-align: center;
+	font-size: 75px;
+}
+
+#ask_user select {
+	background: transparent;
+	background-color: rgba(255,255,255,0.5);
+	background: url('../resources/images/arrow.jpg') no-repeat right #ddd;
+  	padding: 5px 15px;
+  	padding-right: 30px;
+  	font-size: 75px;
+   	border: 0;
+  	border-radius: 0;
+  	color: #eee;
+   	-webkit-appearance: none;
+}

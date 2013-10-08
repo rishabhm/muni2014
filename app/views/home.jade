@@ -1,1 +1,26 @@
-| Hello #{name} #{age}
+//- CSS includes
+link(rel="stylesheet", href="styles/main.css")
+link(href='http://fonts.googleapis.com/css?family=Amatic+SC', rel='stylesheet', type='text/css')
+
+//- Client-side Javascript
+script(type='text/javascript', src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js")
+script(type='text/javascript', src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js")
+script(type='text/javascript', src="js/main.js")
+
+body
+	h1#heading.font1
+		| Air Printing
+
+	//- If we want to start with the fill-in-the-blank sentence
+	//- p#ask_user.font1
+	//- 	| I 
+	//- 	select.font1
+	//- 		option need
+	//- 		option have
+	//- 	| a printer
+
+	//- If we want to start with a facebook login
+	//- I think we should start with this
+	a(href="/auth/facebook")
+		| Login with facebook
+

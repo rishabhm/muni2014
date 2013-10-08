@@ -1,8 +1,11 @@
 var mongoose = require('mongoose');
 
 var userSchema = new mongoose.Schema({
-	name 	: String,
-	age 	: Number
+	username 	: String,
+	email 		: String,
+	name 		: String,
+	provider 	: String,
+	facebook 	: {}
 });
 
 userSchema.methods = {

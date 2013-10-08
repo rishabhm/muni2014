@@ -9,6 +9,9 @@
 		"express" 	: "3.x",
 		"redis"		: "*",
 		"mongoose"	: "*",
-		"jade" 		: "*"
+		"jade" 		: "*",
+		"passport"	: "*",
+		"passport-facebook" : "*",
+		"passport-local"	: "*"
 	}
 }

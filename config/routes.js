@@ -1,7 +1,18 @@
-module.exports = function (app) {
+module.exports = function (app, io) {
 	
-	var main = require('../app/controllers/main');
+	var main = require('../app/controllers/main'),
+		passport = require('passport');
 
 	app.get('/home', main.home);
+
+	app.get('/auth/facebook', passport.authenticate('facebook'));
+	app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/home', failureRedirect: '/home'}));
+
+	io.sockets.on('connection', function(socket) {
+		socket.on('testingSocket', function (data) {
+			console.log(data);
+			socket.emit('callingBack', {message: 'Hi there!'});
+		});
+	});
 	
 };
