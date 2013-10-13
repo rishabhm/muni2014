@@ -1,7 +1,5 @@
 /*Styling rules for body*/
-
 body {
-	/*background-image: url('../resources/bg_pattern/notebook.png');*/
 	margin: 0;
 }
 
@@ -13,11 +11,45 @@ body {
 	display: inline-block;
 }
 
+.section {
+	display: none;
+	padding-top: 15px;
+	transition: opacity 0.5s;
+}
+
+/*.section.selected {
+	display: block;
+}*/
+
+/*.home {
+	display: none;
+	padding-top: 15px;
+}
+
+.registration {
+	display: none;
+	padding-top: 15px;
+}
+
+.hotel {
+	display: none;
+	padding-top: 15px;
+}
+
+.committee {
+	display: none;
+	padding-top: 15px;	
+}
+
+.resources {
+	display: none;
+	padding-top: 15px;
+}*/
+
 .logo {
 	position: relative;
 	margin: 0 auto;
 	padding-top: 15px;
-	/*margin-bottom: 25px;*/
 	text-align: center;
 }
 
@@ -55,12 +87,10 @@ body {
 
 .menu {
 	color: #fff;
-	/*font-weight: lighter;*/
 	padding-top: 5px;
 	padding-left: 30px;
 	font-size: 18pt;
 	letter-spacing: 1px;
-	/*text-align: center;*/
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -118,7 +148,7 @@ body {
 	transition: color 0.5s;
 }
 
-.menu_item:hover {
+.menu_item:hover, .menu_item.selected {
 	color: rgb(255,134,40);
 }
 
@@ -133,7 +163,7 @@ body {
 	margin-left: 300px;
 }
 
-.right_col img {
+.right_col img.backdrop {
 	position: fixed;
 	z-index: -1;
 	bottom: 0;
@@ -155,39 +185,13 @@ body {
 	width: 100%;
 }
 
-.home {
-	display: none;
-	padding-top: 15px;
-}
-
-.registration {
-	/*display: none;*/
-	padding-top: 15px;
-	padding-bottom: 100px;
-	/*overflow: scroll;*/
-	/*background-color: rgba(255,255,255,0.6);*/
-}
-
-.hotel {
-	display: none;
-	padding-top: 15px;
-}
-
-.committee {
-	display: none;
-	padding-top: 15px;	
-}
-
-.resources {
-	display: none;
-	padding-top: 15px;
-}
 
 .homeheading {
 	font-family: 'Parisienne', cursive;
 	text-align: right;
 	padding-right: 25px;
 }
+
 
 .regheading {
 	font-family: 'Parisienne', cursive;
@@ -204,12 +208,14 @@ body {
 	text-align: right;
 	padding-right: 25px;	
 	margin-bottom: 30px;
+	margin-top: 5px;
 	/*background-color: rgba(255,255,255,0.5)	*/
 }
 
 .home .heading {
 	font-size: 20px;
 	padding-right: 50px;
+	margin-bottom: 2px;
 }
 
 .home .secgen {
@@ -229,6 +235,14 @@ body {
 	margin-bottom: 15px;
 }
 
+.hotel .letter table {
+	background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	padding-top: 0;
+	border: 0;
+	margin-bottom: 15px;
+}
+
 .itrow {
 	font-style: italic;
 }
@@ -236,6 +250,10 @@ body {
 .registration .letter table th {
 	border-bottom: 1px solid #123456;
 	vertical-align: middle;
+}
+
+.registration .letter .reg_table {
+	border: 0;
 }
 
 .regreg {
@@ -278,4 +296,50 @@ body {
 
 .letter_ending .post {
 	font-weight: bold;
+}
+
+.submit_btn {
+	margin: 0 auto;
+	margin-top: 10px;
+	cursor: pointer;
+	text-align: center;
+	width: 150px;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Quattrocento', serif;
+	letter-spacing: 2;
+	background-color: #123456;
+	margin-bottom: 50px;
+}
+
+.submit_btn:hover {
+	border: 2px solid #fff;
+}
+
+.reg_table input[type="text"] {
+	border: 1px solid #ccc;
+	box-shadow: none;
+	padding: 5px;
+	font-family: 'Quattrocento', serif;
+}
+
+.reg_table td {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.right_col img.hotel_logo {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 10px;
+	width: 150px;
+	height: inherit;
+}
+
+.committee .letter ul li {
+	padding: 5px;
+}
+
+.com_name {
+	text-decoration: underline;
 }

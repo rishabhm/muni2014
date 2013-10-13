@@ -1,0 +1,314 @@
+.heading.regheading
+	| Registration Process
+.letter
+	ol
+		li
+			| Fill and complete the 
+			a(href="#")
+				| online registration form
+			br
+			| You will receive an email with your school's invoice once the form is submitted. On the invoice, there will be a School Registration Fee and a Delegate Fee respective of the numbers of delegates attending. The School Registration Fee must be paid before country assignments can be assigned to your school. Schools can either send one check for both the School Registration and Delegate Fees, or send two separate checks: one for the School Registration Fee and another for the Delegate Fee, as well
+		li
+			| Mail a check for the amount shown on the invoice to
+			br
+			.address
+				u
+					| Model United Nations Illinois
+				br
+				| 280 Illini Union, Cube #36
+				br
+				| 1401 West Green Street
+				br
+				| Urbana, IL 61801
+			| Pleas make your check payable to 
+			u
+				| Model United Nations
+		li
+			| We will begin assigning positions after receiving both your online registration submission and payment for the School Registration Fee. Assigning positions can take some time and schools that register early will get priority in assignments. Please keep in mind that your school will not receive country assignments until we receive payment for the School Registration Fee
+		li
+			| Once country positions have been assigned, schools must submit the names of their delegates and their respective positions by March 1st, 2014. We will email forms closer to the conference date. <br> If you have any questions or conerns regarding the registration process, please dont hesitate to contact us at 
+			a(href="mailto:muni@uiucmodelun.org")
+				| MUNI@uiucmodelun.org
+		li
+			| Please note that hotel accommodations cannot be booked through our website. Please contact the hotel directly for reservations. 
+.heading.regheading
+	| Registration Dates and Fees
+.letter
+	table
+		tr 
+			th.earlyreg(colspan="4")
+				| Early Registration
+		tr.itrow 
+			td
+				| Begins
+			td
+				| Ends
+			td
+				| School Registration Fee (*)
+			td
+				| Delegate Fee
+		tr 
+			td 
+				| October 14
+			td 
+				| November 14
+			td 
+				| $50
+			td
+				| $45
+		tr
+			th.regreg(colspan="4")
+				| Regular Registration
+		tr.itrow 
+			td
+				| Begins
+			td
+				| Ends
+			td
+				| School Registration Fee (*)
+			td
+				| Delegate Fee
+		tr 
+			td 
+				| October 14
+			td 
+				| November 14
+			td 
+				| $50
+			td
+				| $50
+	i 
+		| * Every school must pay a non-refundable School Registration Fee. Please note that the School Registration Fee must be paid before Country Assignments can be allocated your school<br>* Registration Period refers to when a school submits their online registration form. for example, if a school wishes to register during the Regular Registration Period then they must submit their online registration form to us by January 14, 2014
+.heading.regheading
+	| Refund Policy
+.letter
+	| The school registration fee is a $50.00 non-refundable fee.<br>The Delegate Fee may be refunded if we are notified by 
+	u
+		| January 14, 2014. 
+	| After this date, the Delegate Fee will be non-refundable
+.heading.regheading
+	| Registration form
+.letter
+	center Contact Information<br>
+	b Advisor Information
+	.address
+		u Primary Advisor<br>
+		table.reg_table
+			tr
+				td(width="200")
+					| Last name*
+				td 
+					input.required(type="text", size="75", name="pa_last_name")
+			tr 	
+				td 
+					| First name*
+				td 
+					input.required(type="text", size="75", name="pa_first_name")
+			tr
+				td
+					| Primary email*
+				td
+					input.required(type="text", size="75", name="pa_email")
+			tr
+				td
+					| Cell phone number* 
+				td
+					input.required(type="text", size="75", name="pa_cell_number")
+			tr
+				td
+					| School phone number
+				td
+					input(type="text", size="75", name="pa_school_number")
+			tr 
+				td
+					| Best way to contact*
+				td
+					select(name="pa_best_contact")
+						option(value="email") Email 
+						option(value="cellphone") Cell phone
+			tr
+				td
+					| Best time to call
+				td
+					input(type="time", name="pa_call_time")			
+		u Secondary Advisor
+		table.reg_table
+			tr
+				td(width="200") 
+					| Last name*
+				td 
+					input.required(type="text", size="75", name="sa_last_name")
+			tr 	
+				td 
+					| First name*
+				td 
+					input.required(type="text", size="75", name="sa_first_name")
+			tr
+				td
+					| Primary email*
+				td
+					input.required(type="text", size="75", name="sa_email")
+			tr
+				td
+					| Cell phone number* 
+				td
+					input.required(type="text", size="75", name="sa_cell_number")
+			tr
+				td
+					| School phone number
+				td
+					input(type="text", size="75", name="sa_school_number")
+			tr 
+				td
+					| Best way to contact*
+				td
+					select(name="sa_best_contact")
+						option(value="email") Email 
+						option(value="cellphone") Cell phone
+			tr
+				td
+					| Best time to call
+				td
+					input(type="time", name="sa_call_time")
+		u Additional Advisor Information
+		textarea(name="advisor_additional", cols="95", rows="5")
+	b School Information
+	.address
+		table.reg_table
+			tr
+				td(width="200")
+					| School name*          
+				td
+					input.required(type="text", size="75", name="s_school_name")
+			tr
+				td
+					| Address*
+				td
+					input.required(type="text", size="75", name="s_address")
+			tr
+				td
+					| City*
+				td
+					input.required(type="text", size="75", name="s_city")
+			tr
+				td
+					| State*
+				td
+					input.required(type="text", size="75", name="s_state")
+			tr
+				td
+					| Country*
+				td
+					input.required(type="text", size="75", name="s_country")
+			tr
+				td
+					| Zipcode*
+				td
+					input.required(type="text", size="75", name="s_zipcode")
+			tr
+				td(colspan="2")
+					| Will your school require transportation to the conference from the hotel?* 
+					input(type="radio", name="s_transportation", value="true") 
+					| Yes 
+					input(type="radio", name="s_transportation", value="false") 
+					| No 
+	center Delegate Information<br>
+	table.reg_table
+		tr
+			td
+				| Number of delegates*
+			td
+				input.required(type="text", size="75", name="number_of_delegates")
+		tr
+			td.required(colspan="2")
+				| Are you interested in double delegation assignments?*
+				input(type="radio", name="double_del", value="true")
+				| Yes 
+				input(type="radio", name="double_del", value="false")
+				| No 
+		tr
+			td(rowspan="3", style="vertical-align: top;")
+				| Country preferences
+			td
+				input(type="text", name="country_pref_1", size="75")
+		tr
+			td
+				input(type="text", name="country_pref_2", size="75")		
+		tr
+			td
+				input(type="text", name="country_pref_3", size="75")
+		tr
+			td.required(colspan="2")
+				| Are you interested in Crisis Committees?*
+				input(type="radio", name="cc_interest", value="true")
+				| Yes 
+				input(type="radio", name="cc_interest", value="false")
+				| No 
+		tr
+			td(rowspan="5", style="vertical-align: top;")
+				| If yes, check all that you are interested in
+			td
+				input(type="checkbox", name="polish_gov")
+				| Polish Government in Exile
+		tr
+			td
+				input(type="checkbox", name="prohibition")
+				| Prohibition: The Age of Bosses
+		tr
+			td
+				input(type="checkbox", name="berlin")
+				| Berlin Conference 1884-85
+		tr
+			td
+				input(type="checkbox", name="sc")
+				| Security Council 1956
+		tr
+			td
+				input(type="checkbox", name="pilgrims")
+				| Pilgrims of the Mayflower
+	table.reg_table
+		tr
+			td.required
+				| Are you interested in position in the UN Security Council(SC)?*
+			td
+				input(type="radio", name="security_council", value="true")
+				| Yes 
+				input(type="radio", name="security_council", value="false")
+				| No
+		tr
+			td.required
+				| Are you interested in position on the International Criminal Court(ICC)?*
+			td
+				input(type="radio", name="icc", value="true")
+				| Yes 
+				input(type="radio", name="icc", value="false")
+				| No
+		tr
+			td.required
+				| Are you interested in position on the International Press Delegation(IPD)?*
+			td
+				input(type="radio", name="ipd", value="true")
+				| Yes 
+				input(type="radio", name="ipd", value="false")
+				| No
+	u Comments
+	textarea(name="comments", cols="95", rows="5")
+	table.reg_table
+		tr
+			td
+				input.required(type="checkbox", name="submit_1")
+			td
+				| I have read, understand, and accept the Refund Policy.*
+		tr
+			td
+				input.required(type="checkbox", name="submit_2")
+			td
+				| I have read, understand, and accept the Country Assignment Policy.*
+		tr
+			td
+				input.required(type="checkbox", name="submit_3")
+			td
+				| I understand that as the Faculty Advisor, I am responsible for my delegation. I will be on site at the conference at all times, and I will be aware of where my delegation is at all times.*
+.submit_btn
+	| SUBMIT
+img.backdrop(src="../../resources/images/reg.png", width="800px", height="530px")
