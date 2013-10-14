@@ -3,6 +3,10 @@ var socket = io.connect('http://localhost'),
 	newSection;
 
 
+function validate(reg_details) {
+
+}
+
 function changeSections() {
 	if (newSection == currentSection)
 		return;
@@ -28,6 +32,16 @@ $(document).ready(function(){
 	socket.on('callingBack', function (data) {
 		console.log(data);
 	});
+	
+	socket.on('registrationSuccess', function (data) {
+		alert('Registration was successful! You will now be redirected to the home page');
+		document.location.href = '/home';
+	});
+	socket.on('registrationFailed', function (data) {
+		errorMessage = 'Registration failed with the following errors :\n' + data.errors + "\nPlease correct the errors and re-submit";
+		alert(errorMessage);
+	});
+
 	$(currentSection).css('display', 'block');
 	$('.right_col').css('height', window.innerHeight);
 
@@ -96,6 +110,7 @@ $(document).ready(function(){
 				responsible : $('input[name="submit_3"]').is(':checked')
 			}
 		};
-		console.log(reg_details);
+		// console.log(reg_details);
+		socket.emit('validateRegistration', reg_details);
 	});
 });

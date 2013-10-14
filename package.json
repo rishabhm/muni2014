@@ -6,6 +6,7 @@
 		"start" : "node app.js"
 	},
 	"devDependencies" : {
+		"nodemailer" 	: "*",
 		"express" 	: "3.x",
 		"redis"		: "*",
 		"mongoose"	: "*",

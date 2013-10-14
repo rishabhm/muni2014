@@ -13,6 +13,9 @@ module.exports = function (app, io) {
 			console.log(data);
 			socket.emit('callingBack', {message: 'Hi there!'});
 		});
+		socket.on('validateRegistration', function (data) {
+			main.validate(data, socket);
+		});
 	});
 	
 };
