@@ -243,6 +243,21 @@ body {
 	margin-bottom: 15px;
 }
 
+.contact .letter table {
+	background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	padding-top: 0;
+	border: 0;
+	margin-bottom: 15px;
+}
+
+.contact_table input[type="text"] {
+	border: 1px solid #ccc;
+	box-shadow: none;
+	padding: 5px;
+	font-family: 'Quattrocento', serif;
+}
+
 .itrow {
 	font-style: italic;
 }
@@ -298,7 +313,7 @@ body {
 	font-weight: bold;
 }
 
-.submit_btn {
+.btn {
 	margin: 0 auto;
 	margin-top: 10px;
 	cursor: pointer;
@@ -312,7 +327,7 @@ body {
 	margin-bottom: 50px;
 }
 
-.submit_btn:hover {
+.btn:hover {
 	border: 2px solid #fff;
 }
 

@@ -1,0 +1,29 @@
+.heading
+	| Contact Us
+.letter
+	table.contact_table
+		tr
+			td
+				| Your name*
+			td
+				input.required(type="text", size="75", name="contact_name")
+		tr
+			td
+				| School name*
+			td
+				input.required(type="text", size="75", name="contact_school")
+		tr
+			td
+				| Email*
+			td
+				input.required(type="text", size="75", name="contact_email")
+		tr
+			td
+				| Phone number
+			td
+				input(type="text", size="75", name="contact_phone")
+	| Comment <br>
+	textarea(name="contact_comment", cols="95", rows="10")
+.contact_btn.btn
+	| CONTACT US
+img.backdrop(src="../../resources/images/contact.png", width="800px", height="524px")

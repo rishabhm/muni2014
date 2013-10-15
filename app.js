@@ -70,6 +70,7 @@ app.configure(function(){
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(express.static(config.root + '/public'));
+    app.use(express.favicon(config.root + '/public/resources/images/images.ico'));
     app.use(app.router);
 });
 

@@ -4,7 +4,7 @@ module.exports = function (app, io) {
 		passport = require('passport');
 
 	app.get('/home', main.home);
-
+	app.get('/*', main.home);
 	app.get('/auth/facebook', passport.authenticate('facebook'));
 	app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/home', failureRedirect: '/home'}));
 
@@ -16,6 +16,9 @@ module.exports = function (app, io) {
 		socket.on('validateRegistration', function (data) {
 			main.validate(data, socket);
 		});
+		socket.on('validateContactForm', function (data) {
+			main.contactValidate(data, socket);
+		})
 	});
 	
 };

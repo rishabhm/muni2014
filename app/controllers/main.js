@@ -11,6 +11,48 @@ exports.home = function (req, res) {
 	// res.render('home', {});
 }
 
+exports.contactValidate = function (data, socket) {
+	var hasErrors = 0,
+		errors = "",
+		emailFilter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
+		numFilter = /\D/g;
+
+	console.log(data);
+
+	if (data.name.length == 0) {
+		hasErrors++;
+		errors += "Please enter your name\n";
+	}
+
+	if (data.school_name.length == 0) {
+		hasErrors++;
+		errors += "Please enter the name of your school\n";
+	}
+
+	if(!emailFilter.test(data.email)) {
+		hasErrors++;
+		errors += "Please enter a valid email\n";
+	}
+
+	if (!(data.phone.replace(numFilter, "").length === 10)) {
+		hasErrors++;
+		errors += "Please enter a valid phone number\n";
+	}
+
+	if (data.comment.length == 0) {
+		hasErrors++;
+		errors += "Please enter your comment\n";
+	}
+
+	if (hasErrors > 0) {
+		socket.emit('contactFailed', {errors : errors});
+	} else {
+		socket.emit('contactSuccess', {errors : null});
+		sendMail(data, 0);
+	}
+
+}
+
 exports.validate = function (data, socket) {
 	var hasErrors = 0,
 		errors = "",
@@ -149,11 +191,11 @@ exports.validate = function (data, socket) {
 		socket.emit('registrationFailed', {errors : errors} );
 	} else {
 		socket.emit('registrationSuccess', {errors: null});
-		sendMail(data);
+		sendMail(data, 1);
 	}	
 }
 
-function sendMail(msg) {
+function sendMail(msg, type) {
 	var smtpTransport = nodemailer.createTransport("SMTP",{
 	    service: "Gmail",
 	    auth: {
@@ -163,11 +205,21 @@ function sendMail(msg) {
 	});
 
 // setup e-mail data with unicode symbols
-var mailOptions = {
-    from: "tech@uiucmodelun.org", // sender address
-    to: "rishabhmarya@gmail.com, secretarygeneral@uiucmodelun.org, gvchavez@gmail.com", // list of receivers
-    subject: "Registration from " + msg.school_info.name, // Subject line
-    text: JSON.stringify(msg, null, 4) // plaintext body
+var mailOptions;
+if (type) {
+	mailOptions = {
+	    from: "tech@uiucmodelun.org", // sender address
+	    to: "rishabhmarya@gmail.com, secretarygeneral@uiucmodelun.org, gvchavez@gmail.com", // list of receivers
+	    subject: "Registration from " + msg.school_info.name, // Subject line
+	    text: JSON.stringify(msg, null, 4) // plaintext body
+	}
+} else {
+	mailOptions = {
+	    from: "tech@uiucmodelun.org", // sender address
+	    to: "rishabhmarya@gmail.com, secretarygeneral@uiucmodelun.org, gvchavez@gmail.com", // list of receivers
+	    subject: "Contacted by " + msg.school_name, // Subject line
+	    text: JSON.stringify(msg, null, 4) // plaintext body
+	}
 }
 
 // send mail with defined transport object

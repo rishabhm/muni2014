@@ -42,6 +42,15 @@ $(document).ready(function(){
 		alert(errorMessage);
 	});
 
+	socket.on('contactSuccess', function (data) {
+		alert('The form was successfully submitted! You will now be redirected to the home page');
+		document.location.href = '/home';
+	});
+	socket.on('contactFailed', function (data) {
+		errorMessage = 'The form could not be submitted due to the following errors : \n' + data.errors + "\nPlease correct the errors and re-submit";
+		alert(errorMessage);
+	});
+
 	$(currentSection).css('display', 'block');
 	$('.right_col').css('height', window.innerHeight);
 
@@ -53,6 +62,17 @@ $(document).ready(function(){
 		newSection = $(this).attr("section");
 		changeSections();
 		// saveCurrentPage();
+	});
+
+	$('.contact_btn').on('click', function (e) {
+		var contact_details = {
+			name : $('input[name="contact_name"]').val(),
+			school_name : $('input[name="contact_school"]').val(),
+			email : $('input[name="contact_email"]').val(),
+			phone : $('input[name="contact_phone"]').val(),
+			comment : $('textarea[name="contact_comment"]').val()
+		}
+		socket.emit('validateContactForm', contact_details);
 	});
 
 	$('.submit_btn').on('click', function (e) {
