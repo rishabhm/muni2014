@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost'),
+var socket = io.connect('http://54.221.223.252'),
 	currentSection = '.home',
 	newSection;
 
