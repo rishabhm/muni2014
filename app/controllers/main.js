@@ -199,7 +199,7 @@ function sendMail(msg, type) {
 	var smtpTransport = nodemailer.createTransport("SMTP",{
 	    service: "Gmail",
 	    auth: {
-	        user: "tech@uiucmodelun.org",
+	        user: "tech@illinoismun.org",
 	        pass: "java2014"
 	    }
 	});
@@ -208,14 +208,14 @@ function sendMail(msg, type) {
 var mailOptions;
 if (type) {
 	mailOptions = {
-	    from: "tech@uiucmodelun.org", // sender address
+	    from: "tech@illinoismun.org", // sender address
 	    to: "rishabhmarya@gmail.com, secretarygeneral@uiucmodelun.org, muni@uiucmodelun.org", // list of receivers
 	    subject: "Registration from " + msg.school_info.name, // Subject line
 	    text: JSON.stringify(msg, null, 4) // plaintext body
 	}
 } else {
 	mailOptions = {
-	    from: "tech@uiucmodelun.org", // sender address
+	    from: "tech@illinoismun.org", // sender address
 	    to: "rishabhmarya@gmail.com, secretarygeneral@uiucmodelun.org, muni@uiucmodelun.org", // list of receivers
 	    subject: "Contacted by " + msg.school_name, // Subject line
 	    text: JSON.stringify(msg, null, 4) // plaintext body
